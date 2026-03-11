@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Quicksand', sans-serif;
+    --font-display: 'Nunito', sans-serif;
+
+    /* Professional, clean light mode palette */
+    --background: 0 0% 98%; /* Soft white background */
+    --foreground: 217 33% 17%; /* Dark charcoal text */
+    
+    --card: 0 0% 100%; /* Pure white cards */
+    --card-foreground: 217 33% 20%; /* Dark text on cards */
+    --card-border: 220 13% 91%; /* Light border */
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 33% 20%;
+    
+    --primary: 217 91% 60%; /* Professional blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 142 71% 45%; /* Complementary green */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 220 13% 91%;
+    --muted-foreground: 217 12% 43%;
+    
+    --accent: 43 96% 56%; /* Warm accent */
+    --accent-foreground: 0 0% 100%;
+    
+    --success: 142 71% 45%; /* Green */
+    --success-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-sans);
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(250, 89%, 85%, 0.4) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, hsla(326, 100%, 85%, 0.4) 0px, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-extrabold tracking-tight;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+  
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-xl shadow-indigo-900/5;
+  }
+}

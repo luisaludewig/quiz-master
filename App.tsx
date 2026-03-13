@@ -10,7 +10,7 @@ import Quiz from "@/pages/Quiz";
 
 function RouterComponent() {
   return (
-    <Router base="/quiz-master">
+    <Router base="/quiz-master/">
     <Switch>
       <Route path="/quiz-master/index.html" component={Home} />
       <Route path="/quiz" component={Quiz} />

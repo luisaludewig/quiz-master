@@ -14,7 +14,7 @@ function RouterComponent() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/quiz" component={Quiz} />
-      <Route component={NotFound} />
+      <Route component={Home} />
     </Switch>
     </Router>
   );

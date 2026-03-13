@@ -8,20 +8,13 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import Quiz from "@/pages/Quiz";
 
-export default function App() {
+function Router() {
   return (
-    <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-    <Router>
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/quiz" component={Quiz} />
-      <Route component={Home} />
+      <Route component={NotFound} />
     </Switch>
-    </Router>
-      <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
   );
 }
 

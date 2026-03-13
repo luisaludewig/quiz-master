@@ -8,13 +8,15 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import Quiz from "@/pages/Quiz";
 
-function Router() {
+function RouterComponent() {
   return (
+    <Router base="/quiz-master">
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/quiz" component={Quiz} />
       <Route component={NotFound} />
     </Switch>
+    </Router>
   );
 }
 
